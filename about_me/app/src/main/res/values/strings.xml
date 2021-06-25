@@ -5,5 +5,6 @@
     <string name="bio">My name is Aryaman and I am the coolest guy I know
     I can sing I can dance I can pretty much do everything. Please vote for me
     so that I can pay you enough money to win your hearts.</string>
+    <string name="nickname_hint">What is your nickname</string>
 
 </resources>
