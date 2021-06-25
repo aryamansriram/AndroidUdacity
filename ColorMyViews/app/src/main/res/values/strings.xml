@@ -8,4 +8,7 @@
     <string name="button_red">RED</string>
     <string name="button_yellow">YELLOW</string>
     <string name="button_green">GREEN</string>
+    <string name="how_to_play">How to Play</string>
+    <string name="tap">Tap the boxes and Buttons</string>
+    <string name="red_button">RED</string>
 </resources>
