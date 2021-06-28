@@ -20,6 +20,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
+import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -54,9 +55,15 @@ class GameWonFragment : Fragment() {
 
     private fun getShareIntent(): Intent {
         var args = GameWonFragmentArgs.fromBundle(arguments!!)
-        val shareIntent = Intent(Intent.ACTION_SEND)
-        shareIntent.setType("text/plain").putExtra(Intent.EXTRA_TEXT,getString(R.string.share_success_text,args.numCorrect,args.numQuestions))
-        return shareIntent
+        //val shareIntent = Intent(Intent.ACTION_SEND)
+        //shareIntent.setType("text/plain").putExtra(Intent.EXTRA_TEXT,getString(R.string.share_success_text,args.numCorrect,args.numQuestions))
+        return ShareCompat.IntentBuilder.from(activity!!)
+                .setText(getString(R.string.share_success_text,args.numCorrect,args.numQuestions))
+            .setType("text/plain")
+            .intent
+
+
+        //return shareIntent
     }
 
     private fun shareSuccess() {
